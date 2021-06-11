@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Ruluko);
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
+
+    * {
+      font-size: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 100%;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      background: #A6A5A4;
+    }
+
+    body {
+      font-family: 'Ruluko', sans-serif;
+      font-size: 16px;
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    body header {
+      top: 0;
+      margin: 0;
+      height: 4rem;
+      background: #323233;
+      text-shadow: 1px 1px #0d0d0d, -1px -1px #323233;
+      box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      z-index: 1;
+    }
+
+    body header h1 {
+      margin-left: 1.5rem;
+      color: #A6A5A4;
+      line-height: 1rem;
+    }
+
+    body header h1 span {
+      float: right;
+      margin-right: 2rem;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      cursor: pointer;
+    }
+
+    body h2 {
+      font-size: 1.75em;
+    }
+
+    body footer {
+      text-align: center;
+      bottom: 0;
+      padding: 0;
+      background: #323233;
+      color: #595959;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    body footer li {
+      display: inline-block;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      cursor: pointer;
+      margin-right: 2rem;
+      text-shadow: 1px 1px #0d0d0d, -1px -1px #121212;
+      -webkit-transition: all .5s ease-in;
+      transition: all .5s ease-in;
+    }
+
+    body footer li:hover {
+      color: #81A4D4;
+      text-shadow: -1px -1px #575757, 1px 1px #121212;
+      -webkit-transform: translateY(2px), scale(1.05);
+      transform: translateY(2px), scale(1.05);
+    }
+
+    main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+    }
+
+    main .sidebar {
+      background: #323233;
+      min-width: 180px;
+      max-width: 300px;
+      margin-bottom: 0;
+      color: #A6A5A4;
+      text-shadow: 1px 1px #0d0d0d, -1px -1px #121212;
+      overflow: auto;
+      height: 600px;
+    }
+
+    main .sidebar h2 {
+      text-align: center;
+      margin: 0;
+      padding: 1.2rem;
+      background: #323233;
+      color: #A6A5A4;
+      border-bottom: 2px solid #2F2F2F;
+    }
+
+    main .sidebar h2:after {
+      content: "The SideBar";
+    }
+
+    main .sidebar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    main .sidebar li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #2F2F2F;
+    }
+
+    main .sidebar li:hover {
+      border-right: .5rem solid #81A4D4;
+      box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.4);
+    }
+
+    main .sidebar a {
+      color: #A6A5A4;
+      display: block;
+      padding: 1.5em .2em;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2em;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    main .sidebar a:before {
+      content: "SideBar";
+    }
+
+    main .sidebar a:hover {
+      color: #81A4D4;
+      margin-left: 1rem;
+    }
+
+    body>header {
+      height: 9rem;
+    }
+
+    body>header h1 {
+      line-height: 2rem;
+    }
+
+    body>header h1 span {
+      line-height: 8rem;
+    }
+
+    main {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    main .sidebar {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+
+    main .sidebar h2:after {
+      content: "The TopBar";
+      padding-left: .5rem;
+    }
+
+    main .sidebar ul li {
+      margin: 0;
+      list-style-type: none;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    main .sidebar ul li:last-child {
+      border-bottom: none;
+    }
+
+    main li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    main .sidebar a:before {
+      content: "";
+    }
+
+    footer {
+      font-size: 80%;
+    }
+
+
+    #all-content {
+      flex: 1;
+    }
+
+    .info {
+      background-color: #294860;
+      border-radius: 20px;
+      /* The border-radius gives rounded corners.*/
+      color: white;
+      padding: 10px;
+      margin: 10px auto;
+    }
+
+    h2 {
+      margin: 10px;
+    }
+
+    .info {
+      background-color: #DFEAF1;
+      padding: 4px;
+      margin: 10px;
+      border-radius: 4px;
+      color: black;
+    }
+
+    */ .info-title {
+      font-size: 1.6em;
+      margin: 8px;
+      text-align: center;
+      color: #294860;
+    }
+
+    .info-description {
+      font-weight: lighter;
+      /* this makes the font a bit less dark */
+      font-size: 1.2em;
+      margin: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Job Tutorials&nbsp;&nbsp;</h1>
+  </header>
+  <main>
+    <div class="sidebar">
+      <div class="TOC">
+        <h1>Table of Contents</h1>
+        <!-- Below this is a <ol> element. "ol" stands for "ordered list." -->
+        <ol>
+          <!-- <li> means "list item" -->
+          <li>
+            <a href="#info-1">Job List</a>
+            <!-- Next I add an "unordered list" within the "list item" of my "ordered list" -->
+            <ul>
+              <li>
+                <a href="#info-1-1">SLAUGHTERER</a>
+              </li>
+              <li>
+                <a href="#info-1-2">FISHERMANS</a>
+              </li>
+              <li>
+                <a href="#info-1-3">MINERS</a>
+              </li>
+              <li>
+                <a href="#info-1-4">BUS DRIVER</a>
+              </li>
+              <li>
+                <a href="#info-1-5">TRUCKER</a>
+              </li>
+              <li>
+                <a href="#info-1-6">FUEL</a>
+              </li>
+              <li>
+                <a href="#info-1-7">TAXI / UBER</a>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="all-content">
+      <a href="about:blank">Back</a>
+      <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+      <h1>THe WaCK PaCK Job Guide</h1>
+      <p>
+        This is the how to for all the jobs in our server so far.
+      </p>
+      <div class="info">
+        <h2 id="info-1">Job Discriptions</h2>
+        <div class="info" id="info-1-1">
+          <div class="info-title">
+            SLAUGHTERER
+          </div>
+          <div class="info-description">
+            <p>
+
+Take the job at the Job Center - You will notice you will have some new markers on the map for that job.  
+1. Proceed to the Butchers Locker Room.  2.   Proceed to Pickup (Chicken Coop) - Process (furthur inside the factory)  - Bag (even further inside the factory) - Sell at Delivery Point (Clucken Bell).
+              <br />
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="info" id="info-1-2">
+        <div class="info-title">
+          FISHERMAN
+        </div>
+        <div class="info-description">
+          <p>
+Take the job at the Job Center - You will notice you will have some new markers on the map for that job.  
+1. Proceed to the Fishermen's Locker Room to go on duty.  2. Drive to the Fishing Area  (get a boat and proceed to fishing area to collect fish)  3.  Once you have enough fish Deliver your fish at the Delivery Point marked on your map.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-3">
+        <div class="info-title">
+          MINER
+        </div>
+        <div class="info-description">
+          <p>
+Take the job at the Job Center - You will notice you will have some new markers on the map for that job.    
+1.   Proceed to the Miner's Locker Room to go on duty.   2.   Proceed to the the Rock marker on your map to start collecting rocks (INSIDE THE MINE NOT ON TOP OF MOUNTAIN).  
+3.   Proceed to the washed rocks location to process your rocks.   4.  Next goto the Smelting area on the map to smelt your collected rocks.   
+5.   Sell everything at the (sell copper, sell diamond, sell gold, sell iron) locations.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-4">
+        <div class="info-title">
+          BUS DRIVER
+        </div>
+        <div class="info-description">
+          <p>
+Take the job at the Job Center - You will notice you will have some new markers on the map for that job.  
+1.   Proceed to the red marker that says BUS.     Here you will get your bus. 2.  Once you get your bus you can hit DEL while sitting in the drivers seat to "go on duty" .   
+This will allow you to drive around and randomly people will pop up on your map to pick up.     Also real players can call the bus system with the phone so just hit DEL to go off duty during that.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-5">
+        <div class="info-title">
+          TRUCKER
+        </div>
+        <div class="info-description">
+          <p>
+Take the job at the Job Center -  1. Proceed to the yellow marker that says Walker Logistics. 
+2. Enter the marker by the tool box to go on duty.  3.   Next marker will allow you to retrive your truck. Once you get your truck you can hit DEL while sitting in the drivers seat to "go on duty" . 
+This will show you some new spots on your mini map that you need to drive to.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-6">
+        <div class="info-title">
+          FUEL
+        </div>
+        <div class="info-description">
+          <p>
+Take the job at the Job Center.   
+1.   Proceed to the Oil Refiner Locker Room.   2.   Proceed to the Drill for oil spot on your map.   3.   Next goto the Mix Refined Oil located on your map.   
+4.   Deliver Gas at the the location on the map.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-7">
+        <div class="info-title">
+          TAXI / UBER
+        </div>
+        <div class="info-description">
+          <p>
+Take the job at the Job Center - You will notice you will have some new markers on the map for that job. 
+1. Proceed to the yellow marker that says Taxi. Here you will get your taxi or use your personal vehicle. 2. Once you get your taxi you can hit DEL while sitting in the drivers seat to "go on duty" . 
+This will allow you to drive around and randomly people will pop up on your map to pick up. Also real players can call the taxi system with the phone so just hit DEL to go off duty during that.
+            <br />
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </main>
+</body>
+
+</html>

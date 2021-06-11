@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>
+      TWPRP Loading Screen
+    </title>
+
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="" name="keywords">
+    <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" name="viewport">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/style-dark.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/css.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/colors/yellow-2.css" media="screen" rel="stylesheet" title="yellow-2" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CDosis:200,300,400,500,600,700,800%7COswald:300,400,700%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <div class="film-grain"></div>
+
+    <div id="preloader" style="background-color: black;">
+      <div id="preloader-status">
+        <div class="preloader-position preloader-effect">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div
+    class="hero-fullscreen hero-bg">
+      <div class="slide-YT hero-fullscreen">
+        <div class="slide bg-img-YT"></div>
+        <!--<div id="videoContainment"></div><a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=SefG0gfxK6s', mute:true, showControls:false, quality:'default', opacity:1, containment:'#videoContainment', optimizeDisplay:true, loop:true, startAt:0, autoPlay:true, showYTLogo:false, addRaster:false, realfullscreen:true}" id="bgndVideo"></a>-->
+        <!--<div id="videoContainment"></div><a class="player" data-property="{videoURL:'https://youtu.be/XFyZIPkHUj8?t=7', mute:true, showControls:false, quality:'default', opacity:1, containment:'#videoContainment', optimizeDisplay:true, loop:true, startAt:8, autoPlay:true, showYTLogo:false, addRaster:false, realfullscreen:true}" id="bgndVideo"></a>-->
+        <div id="videoContainment"></div><a class="player" id="bgndVideo"></a>
+
+      </div>
+      <div class="preload-content"></div>
+    </div>
+
+    <svg id="cursor" width="20" height="20">
+      <defs>
+        <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f2c061"></stop>
+          <stop offset="100%" stop-color="#da1b60"></stop>
+        </linearGradient>
+      </defs>
+      <circle r="07" cx="10" cy="10" fill="none"></circle>
+      <line x1="0" y1="0" x2="20" y2="20"></line>
+      <line x1="0" y1="20" x2="20" y2="0"></line>
+    </svg>
+
+    <div class="upper-page current"
+        id="home">
+
+
+      <div class="line-left left-position"></div>
+
+      <div class="transparent-borders OFF"></div>
+      <div class="center-container-home">
+
+        <div class="center-block-home">
+
+          <div class="upper-content">
+
+            <div class="container sections">
+
+              <div class="row">
+
+                <div class="fin-wrapper introduction">
+
+                  <div class="fin-slides-wrapper">
+                    <ul class="fin-slides">
+                      <li>
+                        <h3>
+                          Be Who You Want to Be
+                        </h3>
+                      </li>
+                      <li>
+                        <h3>
+                          A Family First, Server Second
+                        </h3>
+                      </li>
+                      <li>
+                        <h3>
+                          Live Without Limits
+                        </h3>
+                      </li>
+                      <li>
+                        <h3>
+                          Live Your Dreams
+                        </h3>
+                      </li>
+                      <li>
+                        <h3>
+                          Create The Impossible
+                        </h3>
+                      </li>
+                    </ul>
+                  </div>               
+                  <div class="fin-heading">
+                    <h1 class="fin-heading">
+                    <center></center>
+                    </h1>
+                  </div>
+                  <div class="fin-subheading">
+                    <center></center>         
+                  </div>
+                  <div class="fin-subheading" style="padding-top:50px;">
+                    <img src="https://cdn.discordapp.com/icons/342772638726356993/c844c5d416dc2c209782de9714c52ecf.png?size=4096" style="max-width: 200px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>

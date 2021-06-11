@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="ui.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="status">
+        <p id="p1"></p>
+        <p id="p2"></p>
+    </div>
+    <div class="cards">
+        <div id="card-one">
+            <img class="card-one" id="card-one-image" src="images/cards/cards_0.png">
+        </div>
+        <div id="card-two">
+            <img class="card-two" id="card-two-image" src="images/cards/cards_0.png">
+        </div>
+    </div>
+
+    <div class="table-cards">
+        <div id="table-card-one">
+            <img class="table-card-one" id="table-card-one-image" src="images/cards/cards_0.png">
+        </div>
+        <div id="table-card-two">
+            <img class="table-card-two" id="table-card-two-image" src="images/cards/cards_0.png">
+        </div>
+        <div id="table-card-three">
+            <img class="table-card-three" id="table-card-three-image" src="images/cards/cards_0.png">
+        </div>
+        <div id="table-card-four">
+            <img class="table-card-four" id="table-card-four-image" src="images/cards/cards_0.png">
+        </div>
+        <div id="table-card-five">
+            <img class="table-card-five" id="table-card-five-image" src="images/cards/cards_0.png">
+        </div>
+    </div>
+    <div class="buttons" id="buttons">
+            <button class="check-button" id="check-button">
+                <div class="button-progress"></div>
+                <div class="button-label"></div>
+            </button>
+            <div class="bet-controls">
+                <button class="bet-button" id="bet-button"><div class="button-label"></div></button>
+                <input class="bet-amount" id="bet-amount" type="number" value="25"  min="1"></input>
+            </div>
+            <button class="fold-button" id="fold-button">
+                <div class="button-progress"></div>
+                <div class="button-label"></div>
+            </button>
+             <button class="exit-button" id="exit-button"><div class="button-label"></div></button>
+    </div>
+    <div class="players">
+        <div id="player1-cards">
+            <img class="player1-card-one" id="player1-card-one-image" src="images/cards/cards_0.png" width="10" height="25">
+            <img class="player1-card-two" id="player1-card-two-image" src="images/cards/cards_0.png" width="10" height="25">
+        </div>
+        <p id="player1" class="player"></p>
+        <div id="player2-cards">
+            <img class="player2-card-one" id="player2-card-one-image" src="images/cards/cards_5.png" width="10" height="25">
+            <img class="player2-card-two" id="player2-card-two-image" src="images/cards/cards_12.png" width="10" height="25">
+        </div>
+        <p id="player2" class="player"></p>
+        <div id="player3-cards">
+            <img class="player3-card-one" id="player3-card-one-image" src="images/cards/cards_25.png" width="10" height="25">
+            <img class="player3-card-two" id="player3-card-two-image" src="images/cards/cards_45.png" width="10" height="25">
+        </div>
+        <p id="player3" class="player"></p>
+        <div id="player4-cards">
+            <img class="player4-card-one" id="player4-card-one-image" src="images/cards/cards_0.png" width="10" height="25">
+            <img class="player4-card-two" id="player4-card-two-image" src="images/cards/cards_0.png" width="10" height="25">
+        </div>
+        <p id="player4" class="player"></p>
+        <div id="player5-cards">
+            <img class="player5-card-one" id="player5-card-one-image" src="images/cards/cards_0.png" width="10" height="25">
+            <img class="player5-card-two" id="player5-card-two-image" src="images/cards/cards_0.png" width="10" height="25">
+        </div>
+        <p id="player5" class="player"></p>
+        <div id="player6-cards">
+            <img class="player6-card-one" id="player6-card-one-image" src="images/cards/cards_0.png" width="10" height="25">
+            <img class="player6-card-two" id="player6-card-two-image" src="images/cards/cards_0.png" width="10" height="25">
+        </div>
+        <p id="player6" class="player"></p>
+    </div>
+</body>
+<script src="./ui.js" type="text/javascript"></script>
+
+</html>

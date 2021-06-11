@@ -1,0 +1,129 @@
+.color-0{color: #ffffff;} /* WHITE */
+.color-1{color: #ff4444;} /* RED */
+.color-2{color: #99cc00;} /* GREEN */
+.color-3{color: #ffbb33;} /* YELLOW */
+.color-4{color: #5eabd1;} /* TEAL (OLD COLOR: #0099cc) */
+.color-5{color: #33b5e5;} /* BLUE */
+.color-6{color: #dfb1f2;} /* PINK/PURPLE (OLD COLOR: #aa66cc) */
+.color-7{color: #a8d6ff;} /*LIGHT BLUE (NEW)*/ 
+.color-8{color: #cc0000;} /*BLOOD RED (TOO DARK?)*/
+.color-9{color: #cc0068;} /*DARK RED (TOO DARK?)*/
+
+
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+#app {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99); /*MAIN CHAT SHADOW*/
+}
+
+.chat-window {
+  position: absolute;
+  padding-top: 5px;
+  top: 15px;
+  left: 10px;
+  width: 30%;
+  height: 200px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation-duration: 1.7s;
+}
+
+
+.chat-messages {
+  position: relative;
+  height: 95%;
+  font-size: 0.88rem; /* 1.2rem */
+  padding-top: 10px;
+  padding-left: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2)
+}
+
+
+.chat-input {
+  font-size: 1.1rem;
+  position: absolute;
+  border-radius: 3px;
+  top: 257px;
+  left: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  
+}
+
+.prefix {
+  position: absolute;
+  margin-top: 2px;
+  left: 4px;
+}
+
+textarea {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  font-size: 0.95rem; /* 1.1rem */
+  display: block;
+  box-sizing: border-box;
+  padding: 6px;
+  padding-left: 27px;
+  color: white;
+  background-color: rgba(10, 10, 10, 0.5);
+  width: 100%;
+  border: 0.8px solid rgba(255, 255, 255, .2);
+  height: 34px;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.msg {
+  margin-bottom: 3px;
+}
+
+.multiline {
+  margin-left: 1.5rem;
+  text-indent: -1.5rem;
+  white-space: pre-line;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 5px;
+  padding-left: 27px;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(44, 62, 80, 1.0);
+  width: 100%;
+}
+
+.help {
+  color: #b0bbbd;
+}
+
+.disabled {
+  color: #b0bbbd;
+}
+
+.suggestion {
+  margin-bottom: 5px;
+}

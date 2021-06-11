@@ -1,0 +1,432 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <style>
+			 #depositUI, #withdrawUI, #loga, #transferUI, #general, #buss, #topbar, #atmopen, #log, #log1, #loginin, #logininatm, #createaccount, #makejob, #settings, #deleting
+			 {display: none;}
+		</style>
+	</head>
+    <body>
+    	<div class="container">
+    		<div id="result"></div>
+    		<div class="topbar" id="topbar">
+    			<div class="cont-p-1">
+    				<div class="parale-1 "></div>
+    			</div>
+    			<div class="cont-p-2">
+    				<div class="parale-2"></div>
+    			</div>
+    			<div class="cont-p-3">
+    				<div class="parale-3"></div>
+    			</div>
+    			<nav>
+    				<div class="logo-topbar"></div>
+    				<button class="btn-sign-out">Log out<i class="fas fa-sign-out-alt"></i></button>
+    			</nav> 
+    		</div>
+    		<div class="logedin-content" id="general">
+    			<div class="flex">
+    				<div class="balancetest box-shadow">
+						<div class='accountnummboy'>Account</div>
+						<div class="line"></div>
+	    					<span class="name"><span class="username1"></span></span><br>
+							<br>
+							<div class='person'>Personal Account /</div>
+							<span class="accnumerek"><span class="accnumber"></span></span><br>
+	    					<br>
+							<div class='ava'>Available balance</div>
+	    					<span class="money">$<span class="curbalance"></span><span class="dollars"> </span></span>
+	    				</p>
+		    		</div>
+		    		<div class="list-btn">
+		    			<button class="btn btn-deposit" id="deposit">
+		    				<div class='depositnow'>Deposit</div>
+		    			</button>
+						
+						<button class="btn btn-withdraw" id="withdraw">
+		    				<div class='withdrawnow'>Withdraw</div>
+		    			</button>
+
+						<button class="btn btn-tranfer" id="transfer">
+		    				<div class='tranfernow'>Transfer</div>
+		    			</button>
+		    		</div>
+					<div class="creadits" id="creadits"></div>
+    			</div>
+	    	</div>
+
+<div class="atmopen-content" id="atmopen">
+	<div class="">
+		<div class="balance box-shadow">
+			<div class="lineatm"></div>
+				<br>
+				<div class='person'>Bank Account /</div>
+				<span class="accnumerek22"><span class="accnumber"></span></span><br>
+				<br>
+			</p>
+		</div>
+		
+		<div class="creaditatm" id="creaditatm"></div>
+		<div class='atmcredit'>Card number:</div>
+		<span class="atmdebit"><span class="debitnum"></span></span>
+		<span class="atmdename"><span class="username1"></span></span>
+		<div class='timeleftatm'>01/30</div> 
+		
+		<img class="atmlogo" alt="visa" src="https://media.discordapp.net/attachments/821553537212874752/823783066522353664/363_Visa_Credit_Card_logo-512.png" alt="visa">
+		<div class='atmamout'>Available balance</div>
+		<span class="moneyatm">$<span class="curbalance"></span><span class="dollars"> </span></span>
+
+		<form id="withdraw1atm">
+			<div class="input-contatm box-shadow">
+				<div class='witeboy'>Withdraw amount:</div>
+				<input id="amountwatm" type="number" placeholder="0 $">
+			</div>
+			<button class="btn but-blueatm" type="submit">
+				<i class="fas fa-check"></i>
+				<span class="fas fa-check icon"></span>
+				<p>Confirm<br>
+				<span>Withdraw money</span></p>
+			</button>
+		</form>
+
+		
+
+	</div>
+</div>
+
+<div class="buss-content" id="buss">
+	<div class="flex">
+		<div class="balancetest box-shadow">
+			<div class='accountnummboy'>Account</div>
+			<div class="line"></div>
+				<span class="name"><span class="username1"></span></span><br>
+				<span class="namee"><span class="username2"></span></span><br>
+				<br>
+				<div class='person'>Business Account /</div>
+				<span class="accnumerek"><span class="accnumber"></span></span><br>
+				<br>
+				<div class='ava'>Available balance</div>
+				<span class="money">$<span class="curbalance"></span><span class="dollars"> </span></span>
+			</p>
+		</div>
+		
+		<div class="list-btn">
+			<button class="btn btn-deposit" id="depositt">
+				<div class='depositnow'>Deposit</div>
+			</button>
+			
+			<button class="btn btn-withdraw" id="withdraww">
+				<div class='withdrawnow'>Withdraw</div>
+			</button>
+
+			<button class="btn btn-tranfer" id="transferr">
+				<div class='tranfernow'>Transfer</div>
+			</button>
+		</div>
+
+		
+		<div class="creaditss" id="creaditss"></div>
+
+
+	</div>
+</div>
+
+	    	<div class="deposit-content" id="depositUI">
+				<div class="flex">
+					<div class='person2'>Personal Account /</div>
+					<span class="accnumerek2"><span class="accnumber"></span></span><br>
+					<br>
+
+    			</div>
+    			<form id="deposit1">
+						
+					<div class='witeboy'>Deposit amount:</div>
+					<div class="double-input">
+						<input id="amount" type="number" placeholder="0 $" class="text-linewit" />
+					</div>
+
+
+    				<button class="btn but-bluesub" type="submit">
+    					<i class="fas fa-check"></i>
+	    				<span class="fas fa-check icon"></span>
+	    				<p>Confirm<br>
+	    				<span>Deposit money</span></p>
+    				</button>
+				</form>
+	    	</div>
+
+		</withman>
+	    	<div class="with-content" id="withdrawUI">
+    			<div class="flex">
+					<div class='person2'>Personal Account /</div>
+					<span class="accnumerek2"><span class="accnumber"></span></span><br>
+					<br>
+
+    			</div>
+    			<form id="withdraw1">
+
+					<div class='witeboy'>Withdraw amount:</div>
+					<div class="double-input">
+						<input id="amountw" type="number" placeholder="0 $" class="text-linewit" />
+					</div>
+
+    				<button class="btn but-bluesub" type="submit">
+    					<i class="fas fa-check"></i>
+	    				<span class="fas fa-check icon"></span>
+	    				<p>Confirm<br>
+	    				<span>Withdraw money</span></p>
+    				</button>
+
+				</form>
+
+	    	</div>
+
+	    	<div class="tran-content" id="transferUI">
+    			<div class="flex">
+					<div class='person2'>Personal Account /</div>
+					<span class="accnumerek2"><span class="accnumber"></span></span><br>
+					<br>
+
+    			</div>
+    			<form id="transfer1">
+					<div class='witeboy'>Transfer amount:</div>
+					<div class="double-input">
+						<input id="amountt" type="number" placeholder="0 $" class="text-linewit" />
+					</div>
+
+					<div class="double-input">
+						<input id="to" type="text" placeholder="Account number" class="text-linewit" />
+					</div>
+					
+    				<button class="btn but-bluesub" type="submit"><i class="fas fa-check"></i><span class="fas fa-check icon"></span><p>Confirm<br><span>Transfer money</span></p></button>
+				</form>
+				<div class="creadit" id="creadit"></div>
+				<div class='lolboy'>Debit Card number:</div>
+				<span class="fontbeauty"><span class="debitnum"></span></span>
+				<span class="fontbeautyy"><span class="username1"></span></span>
+				<div class='lolboyy'>01/30</div> 
+				
+				<img class="logo" alt="visa" src="https://media.discordapp.net/attachments/821553537212874752/823783066522353664/363_Visa_Credit_Card_logo-512.png" alt="visa">
+		
+				
+
+
+				
+	    	</div>
+
+	    	<div class="log2-content" id="loginin">
+				<form id="login1">
+    				<div class="double-input">
+						<input id="login" type="text" placeholder="Login" class="text-line" />
+   
+					</div>
+
+					<div class="double-input">
+
+
+						<input id="password" type="password" placeholder="Password" class="text-line" />
+
+
+					</div>
+
+
+
+					<button class="btn but-blue2" type="submit"><i class="fas fa-bars"></i>
+						<span class=""></span>
+							<p>Login<br>
+							<span>into account</span></p>
+						<span></span></p>
+					</button>
+
+				</form>
+						<button class="btn btn-grey back1">
+							<i class="fas fa-bars"></i>
+							<span class="fas fa-arrow-left icon"></span>
+							<p>Return<br>
+							<span>To main menu</span></p>
+						</button>
+			</div>
+
+<!-- ########### LOGIN Atm ###########  -->
+<div class="logmeok-content" id="logininatm">
+	<form id="loginatmok">
+		<div class="double-input">
+			<input id="loginatm" type="text" placeholder="Login" class="text-line" />
+
+
+		</div>
+
+		<div class="double-input">
+
+			<input id="passwordatm" type="password" placeholder="Password" class="text-line" />
+
+
+		</div>
+
+
+
+		<button class="btn but-blue2" type="submit"><i class="fas fa-bars"></i>
+			<span class=""></span>
+				<p>Login<br>
+				<span>into account</span></p>
+			<span></span></p>
+		</button>
+
+	</form>
+			<button class="btn btn-grey backatm">
+				<i class="fas fa-bars"></i>
+				<span class="fas fa-arrow-left icon"></span>
+				<p>Return<br>
+				<span>To main menu</span></p>
+			</button>
+</div>
+
+	    	<div class="create-content" id="createaccount">
+				<form id="create1">
+
+					<div class="double-input">
+						<input id="login12" type="text" placeholder="Username" class="text-line" />
+						
+					</div>
+					
+					<div class="double-input">
+						<input id="password1" type="password" placeholder="Password" class="text-line" />
+					</div>
+
+					<div class="double-input">
+						<input id="pin" type="password" placeholder="Pin" class="text-linepin" />
+					</div>
+
+					<button class="btn but-blue2" type="submit"><i class="fas fa-bars"></i>
+						<span class=""></span>
+							<p>Create<br>
+							<span>account</span></p>
+						<span></span></p>
+					</button>
+
+
+				</form>
+						<button class="btn btn-grey back1">
+							<i class="fas fa-bars"></i>
+							<span class="fas fa-arrow-left icon"></span>
+							<p>Back<br>
+							<span>To main menu</span></p>
+						</button>
+			</div>
+
+
+<div class="jobok-content" id="makejob">
+	<form id="ohh">
+		<div class="double-input">
+			<input id="login2" type="text" placeholder="Login" class="text-line" />
+
+
+		</div>
+
+		<div class="double-input">
+
+
+			<input id="passwordda" type="password" placeholder="Password" class="text-line" />
+
+
+		</div>
+
+
+
+		<button class="btn but-blue2" type="submit"><i class="fas fa-bars"></i>
+			<span class=""></span>
+				<p>Login<br>
+				<span>into account</span></p>
+			<span></span></p>
+		</button>
+
+	</form>
+			<button class="btn btn-grey back1">
+				<i class="fas fa-bars"></i>
+				<span class="fas fa-arrow-left icon"></span>
+				<p>Return<br>
+				<span>To main menu</span></p>
+			</button>
+</div>
+
+
+
+<div class="j-content" id="loga">
+	<div class="masno-input">
+
+
+		<div class="creadit" id="creadit"></div>
+		<div class='lolboy'>Debit Card number:</div>
+		<span class="fontbeauty"><span class="debitnum"></span></span>
+		<span class="fontbeautyy"><span class="username1"></span></span>
+		<div class='lolboyy'>01/30</div> 
+		
+		<img class="logo" alt="visa" src="https://media.discordapp.net/attachments/821553537212874752/823783066522353664/363_Visa_Credit_Card_logo-512.png" alt="visa">
+
+
+
+
+
+
+
+	</div>
+</div>
+
+			<div class="log-content" id="log">
+				<div class="masno-input">
+
+			
+					<div class="double-input">
+						
+						<button class="btn but-logboy2" id="logon"><i class="fas fa-bars"></i>
+							<span class=""></span>
+								<p>Login<br>
+								<span>into account</span></p>
+							<span></span></p>
+						</button>
+						
+					</div>
+
+					
+					<div class="double-input">
+						
+						<button class="btn but-logboy" id="createac"><i class="fas fa-bars"></i>
+							<span class=""></span>
+								<p>Make<br>
+								<span>an bank Account</span></p>
+							<span></span></p>
+						</button>
+						
+					</div>
+
+					<div class="double-input">
+						
+						<button class="btn but-jabbank" id="loginjob"><i class="fas fa-bars"></i>
+							<span class=""></span>
+								<p>Login<br>
+								<span>To Job account</span></p>
+							<span></span></p>
+						</button>
+						
+					</div>
+					
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+    	</div>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="index.js"></script>
+    </body>
+</html>

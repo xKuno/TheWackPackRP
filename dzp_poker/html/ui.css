@@ -1,0 +1,179 @@
+body {
+    display: none;
+    opacity: 100%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0px;
+    overflow: hidden;
+}
+
+img {
+    width: 6vw;
+    height: 14vh;
+}
+
+.status {
+    opacity: 75%;
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    height: 6vw;
+    width: 40vh;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font: bold;
+    color: #ffffff;
+    background-color: #4CAF50;
+}
+
+.cards {
+    position: absolute;
+    bottom: 5%;
+    left: 37%;
+}
+
+#card-one-image {
+    margin-right: -80px;
+    display: inline;
+    transform: rotate(-8deg);
+}
+
+#card-two-image {
+    display: inline;
+    transform: rotate(8deg);
+}
+
+.table-cards {
+    position: absolute;
+    bottom: 50%;
+    left: 37%;
+}
+
+.buttons {
+    opacity: 75%;
+    position: absolute;
+    display: inline;
+    bottom: 5vh;
+    left: 49vw;
+}
+
+.bet-amount {
+    display: block;
+    margin: 5px;
+    margin-top: -5px;
+    background-color: #f3f3f3;
+    border-radius: 0px 0px 5px 5px;
+    border: 3px solid #5280d6;
+    height: 2vw;
+    width: 15vh;
+    font-size: 16px;
+    text-align: center;
+}
+
+.check-button, .bet-button, .fold-button, .exit-button {
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    font-size: 28px;
+    color: #ffffff;
+    background-color: #696969;
+    padding: 20px;
+    margin: 5px;
+    width: 15vh;
+    height: 4vw;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.check-button:after, .bet-button:after, .fold-button:after, .exit-button:after {
+    content: "";
+    background: #d6ddd6;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+  
+.check-button:active:after, .bet-button:active:after, .fold-button:active:after, .exit-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.bet-button {
+  height: 3vw;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.button-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-top: -25%; */
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.button-progress {
+    width: 15vh;
+    height: 4vw;
+    border-radius: 5px;
+    margin: -20px;
+    background-color: transparent;
+    animation: pulse 1.3s linear infinite;
+}
+
+.exit-button {
+  background-color: #852a2a;
+  width: 9vh;
+}
+
+.players {
+    position: absolute;
+    bottom: 22%;
+    left: 3%;
+    font-size: 20px;
+    font-family: sans-serif;
+    font: bold;
+    color: #ffffff;
+    margin-bottom: -10px;
+}
+
+.players img {
+    opacity: 0.0;
+    object-fit: cover;
+    object-position: 0px 0px;
+    width: 60px;
+    height: 25px;
+    margin-right: -38px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+@keyframes pulse {
+    0% {
+        filter:hue-rotate(0deg);
+        filter:brightness(100%);
+    }
+    50% {
+        filter:hue-rotate(20deg);
+        filter:brightness(170%);
+    }
+    100% {
+        filter:hue-rotate(0deg);
+        filter:brightness(100%);
+   };
+}
